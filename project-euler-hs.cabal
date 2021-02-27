@@ -1,0 +1,57 @@
+cabal-version:      3.4
+name:               project-euler-hs
+version:            0.1.0.0
+
+-- A short (one-line) description of the package.
+-- synopsis:
+
+-- A longer description of the package.
+-- description:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+license:            Unlicense
+license-file:       LICENSE
+author:             Bernd Beuster
+maintainer:         bernd.beuster@gmail.com
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files:
+    README.md
+
+library
+    hs-source-dirs:   src
+        
+    exposed-modules:  Problem001
+                    , Problem002
+
+    other-modules:    Fibonacci
+
+    build-depends:    base
+
+    default-language: Haskell2010
+    ghc-options:      -Wall -Werror
+
+executable project-euler-hs
+    hs-source-dirs:   app
+    main-is:          Main.hs
+
+    build-depends:    base
+                    , project-euler-hs
+
+    default-language: Haskell2010
+    ghc-options:      -Wall -Werror
+
+test-suite test-project-euler-hs
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          Spec.hs
+
+    build-depends:    base
+                    , hspec
+                    , project-euler-hs
+
+    default-language: Haskell2010
+    ghc-options:      -Wall -Werror
