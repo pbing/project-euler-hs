@@ -6,4 +6,4 @@ problem002 :: Int -> Int
 problem002 = sum . filter even . fibs
 
 fibs :: Int -> [Int]
-fibs n = takeWhile (<= n) (map fromInteger fiblist)
+fibs n = takeWhile (<= n) $ fromInteger <$> fiblist
