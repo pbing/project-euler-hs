@@ -1,14 +1,14 @@
 module Problem014 (problem014) where
 
+import Data.Foldable
+import Data.Function
+
 problem014 :: Int -> Int
 problem014 = fst . maxCollatz
 
 -- return the starting value and the count of the maximum Collatz sequence
 maxCollatz :: Int -> (Int, Int)
-maxCollatz n = foldr cmp (0, 0) $ zip [1 .. n] (map collatzCount [1 .. n])
-  where
-    cmp :: (Int, Int) -> (Int, Int) -> (Int, Int)
-    cmp a b = if snd a > snd b then a else b
+maxCollatz n = maximumBy (compare `on` snd) $ zip [1 .. n] (map collatzCount [1 .. n])
 
 -- count the terms of the Collatz sequence
 collatzCount :: Int -> Int
