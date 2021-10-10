@@ -5,7 +5,7 @@ problem014 = fst . maxCollatz
 
 -- return the starting value and the count of the maximum Collatz sequence
 maxCollatz :: Int -> (Int, Int)
-maxCollatz n = foldl cmp (0, 0) $ zip [1 .. n] (map collatzCount [1 .. n])
+maxCollatz n = foldr cmp (0, 0) $ zip [1 .. n] (map collatzCount [1 .. n])
   where
     cmp :: (Int, Int) -> (Int, Int) -> (Int, Int)
     cmp a b = if snd a > snd b then a else b
