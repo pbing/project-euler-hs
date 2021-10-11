@@ -7,10 +7,10 @@ This project is a mere test vehicle for `cabal` and `hspec`.
 ```shell
 git clone https://github.com/pbing/project-euler-hs.git
 cd project-euler-hs
-cabal update && cabal install --lib hspec
 ```
 
 ## Run tests
+
 ```shell
 cabal run test-project-euler-hs
 ```
@@ -20,7 +20,6 @@ cabal test --test-show-details=direct
 ```
 
 ## Solve all problems
-
 ```shell
 cabal run project-euler-hs
 ```
