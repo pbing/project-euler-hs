@@ -25,6 +25,7 @@ library
     exposed-modules:  Problem001
                     , Problem002
                     , Problem014
+                    , Problem016
 
     other-modules:    Fibonacci
 

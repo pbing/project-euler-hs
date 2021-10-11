@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -Wno-type-defaults #-}
 module Main where
 
 import Test.Hspec
@@ -5,6 +6,7 @@ import Test.Hspec
 import Problem001
 import Problem002
 import Problem014
+import Problem016
 
 main :: IO ()
 main = hspec $ do
@@ -17,3 +19,6 @@ main = hspec $ do
 
     it "014: Longest Collatz sequence" $ do
       problem014 10 `shouldBe` 9
+
+    it "016: Power digit sum" $ do
+      problem016 (2 ^ 15) `shouldBe` 26
