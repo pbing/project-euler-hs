@@ -26,6 +26,7 @@ library
                      Problem002
                      Problem014
                      Problem016
+                     Problem092
 
     other-modules:    Fibonacci
 
