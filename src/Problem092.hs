@@ -10,11 +10,8 @@ reverseDigits n =
   let (q, r) = quotRem n 10
   in if q == 0 then [r] else r : reverseDigits q
 
-square :: Int -> Int
-square x = x * x
-
 step :: Int -> Int
-step = sum . map square . reverseDigits
+step  = foldr (\n -> (+) (n * n)) 0 . reverseDigits
 
 terminator :: Int -> Int
 terminator n

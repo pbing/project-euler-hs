@@ -7,6 +7,7 @@ import Problem001
 import Problem002
 import Problem014
 import Problem016
+import Problem092
 
 main :: IO ()
 main = hspec $ do
@@ -22,3 +23,6 @@ main = hspec $ do
 
     it "016: Power digit sum" $ do
       problem016 (2 ^ 15) `shouldBe` 26
+
+    it "092: Power digit sum" $ do
+      problem092 1000 `shouldBe` 857
