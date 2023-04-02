@@ -2,14 +2,16 @@
 -- https://wiki.haskell.org/Euler_problems/1_to_10
 {-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 
-module Primes where
+module Util.Primes where
+
+import Util.List
 
 primes :: [Int]
-primes = 2 : filter (isSingleton . primeFactors) [3, 5..]
+primes = 2 : 3: filter (isSingleton . primeFactors) seq6k
   where
-    isSingleton :: [a] -> Bool
-    isSingleton [_] = True
-    isSingleton _   = False
+    -- (6k - 1), (6k + 1) sequence
+    seq6k :: [Int]
+    seq6k = merge [5, 11..] [7, 13..]
 
 primeFactors :: Int -> [Int]
 primeFactors n = factor n primes

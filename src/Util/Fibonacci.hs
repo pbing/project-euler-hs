@@ -1,7 +1,7 @@
 -- * Fibonacci numbers
 -- http://www.vex.net/~trebla/haskell/calculator/colour/Calculator.html#fib
 
-module Fibonacci where
+module Util.Fibonacci where
   
 -- | The infinite list of fibonacci numbers.
 fiblist :: [Integer]

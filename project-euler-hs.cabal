@@ -29,8 +29,9 @@ library
                       Problem016
                       Problem092
 
-    other-modules:    Fibonacci
-                      Primes
+    other-modules:    Util.Fibonacci
+                      Util.List
+                      Util.Primes
 
     build-depends:    base
 
