@@ -3,6 +3,7 @@ module Main where
 
 import Problem001
 import Problem002
+import Problem003
 import Problem014
 import Problem016
 import Problem092
@@ -12,6 +13,7 @@ main :: IO ()
 main = do
   putStrLn $ "Problem 001: " ++ show (problem001 1000)
   putStrLn $ "Problem 002: " ++ show (problem002 4000000)
+  putStrLn $ "Problem 003: " ++ show (problem003 600851475143)
   putStrLn $ "Problem 014: " ++ show (problem014 1000000)
   putStrLn $ "Problem 016: " ++ show (problem016 $ 2 ^ 1000)
   putStrLn $ "Problem 092: " ++ show (problem092 $ (10 ^ 7) - 1)

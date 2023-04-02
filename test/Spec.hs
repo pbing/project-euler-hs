@@ -5,6 +5,7 @@ import Test.Hspec
 
 import Problem001
 import Problem002
+import Problem003
 import Problem014
 import Problem016
 import Problem092
@@ -18,11 +19,14 @@ main = hspec $ do
     it "002: Even Fibonacci number" $ do
       problem002 89 `shouldBe` sum (filter even [1, 2, 3, 5, 8, 13, 21, 34, 55, 89])
 
+    it "003: Largest prime factor" $ do
+      problem003 13195 `shouldBe` 29
+      
     it "014: Longest Collatz sequence" $ do
       problem014 10 `shouldBe` 9
 
     it "016: Power digit sum" $ do
       problem016 (2 ^ 15) `shouldBe` 26
 
-    it "092: Power digit sum" $ do
+    it "092: Square digit chains" $ do
       problem092 1000 `shouldBe` 857

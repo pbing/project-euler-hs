@@ -22,15 +22,17 @@ extra-source-files:
     README.md
 
 library
-    exposed-modules: Problem001
-                     Problem002
-                     Problem014
-                     Problem016
-                     Problem092
+    exposed-modules:  Problem001
+                      Problem002
+                      Problem003
+                      Problem014
+                      Problem016
+                      Problem092
 
     other-modules:    Fibonacci
+                      Primes
 
-    build-depends:    base ^>=4.14.1.0
+    build-depends:    base
 
     hs-source-dirs:   src
     default-language: Haskell2010
@@ -39,7 +41,7 @@ library
 executable project-euler-hs
     main-is:          Main.hs
 
-    build-depends:    base ^>=4.14.1.0
+    build-depends:    base
                     , project-euler-hs
     hs-source-dirs:   app
     default-language: Haskell2010
@@ -49,7 +51,7 @@ test-suite test-project-euler-hs
     type:             exitcode-stdio-1.0
     main-is:          Spec.hs
 
-    build-depends:    base ^>=4.14.1.0
+    build-depends:    base
                     , hspec
                     , project-euler-hs
 
