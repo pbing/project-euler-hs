@@ -7,7 +7,7 @@ module Util.Primes where
 import Util.List
 
 primes :: [Int]
-primes = 2 : 3: filter (isSingleton . primeFactors) seq6k
+primes = 2 : 3 : filter (isSingleton . primeFactors) seq6k
   where
     -- (6k - 1), (6k + 1) sequence
     seq6k :: [Int]
