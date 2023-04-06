@@ -6,17 +6,17 @@ module Util.Primes where
 
 import Util.List
 
-primes :: [Int]
+primes :: (Integral a, Num a) => [a]
 primes = 2 : 3 : filter (isSingleton . primeFactors) seq6k
   where
     -- (6k - 1), (6k + 1) sequence
-    seq6k :: [Int]
+    seq6k :: (Enum a, Num a) => [a]
     seq6k = [x + y | x <- [6, 12..], y <- [-1, 1]]
 
-primeFactors :: Int -> [Int]
+primeFactors :: (Integral a, Num a) => a -> [a]
 primeFactors n = factor n primes
   where
-    factor :: Int -> [Int] -> [Int]
+    factor :: Integral a => a -> [a] -> [a]
     factor m (p:ps)
         | p * p > m      = [m]
         | m `mod` p == 0 = p : factor (m `div` p) (p:ps)
