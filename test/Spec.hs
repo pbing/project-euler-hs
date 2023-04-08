@@ -45,7 +45,7 @@ main = hspec $ do
       problem003 13195 `shouldBe` 29
 
     it "004: Largest palindrome product" $ do
-      problem004 [x * y | x <- [10..99], y <- [x..99]] `shouldBe` 9009
+      problem004 2 `shouldBe` 9009
       
     it "014: Longest Collatz sequence" $ do
       problem014 10 `shouldBe` 9
