@@ -2,13 +2,10 @@
 
 module Problem092 (problem092) where
 
+import Util.Number
+
 problem092 :: Int -> Int
 problem092 n = length $ filter (== 89) $ map terminator [1 .. n]
-
-reverseDigits :: Int -> [Int]
-reverseDigits n =
-  let (q, r) = quotRem n 10
-  in if q == 0 then [r] else r : reverseDigits q
 
 step :: Int -> Int
 step  = foldr (\n -> (+) (n * n)) 0 . reverseDigits

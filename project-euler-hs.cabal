@@ -31,6 +31,7 @@ library
 
     other-modules:    Util.Fibonacci
                       Util.List
+                      Util.Number
                       Util.Primes
 
     build-depends:    base
