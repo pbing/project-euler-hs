@@ -8,7 +8,7 @@ problem092 :: Int -> Int
 problem092 n = length $ filter (== 89) $ map terminator [1 .. n]
 
 step :: Int -> Int
-step  = foldr (\n -> (+) (n * n)) 0 . reverseDigits
+step = foldr (\n -> (+) (n * n)) 0 . digits
 
 terminator :: Int -> Int
 terminator n

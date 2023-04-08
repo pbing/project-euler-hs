@@ -25,11 +25,11 @@ library
     exposed-modules:  Problem001
                       Problem002
                       Problem003
+                      Problem004
                       Problem014
                       Problem016
                       Problem092
-
-    other-modules:    Util.Fibonacci
+                      Util.Fibonacci
                       Util.List
                       Util.Number
                       Util.Primes
