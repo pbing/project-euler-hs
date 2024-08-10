@@ -5,7 +5,7 @@ module Util.Fibonacci where
   
 -- | The infinite list of fibonacci numbers.
 fiblist :: [Integer]
-fiblist = 0 : 1 : zipWith (+) fiblist (tail fiblist)
+fiblist = 0 : 1 : zipWith (+) fiblist (drop 1 fiblist)
 
 {- |
    An efficient recursive algorithm for computing /one/ fibonacci number.
